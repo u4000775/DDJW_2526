@@ -1,6 +1,18 @@
 body{
 	background-color: black;
 }
+button{
+	color: blue;
+	background-color: white;
+}
+button:hover{
+	background-color: gray;
+	color: red;
+}
+button:active{
+	background-color: green;
+	color: white;
+}
 
 #title, .center{
 	display: block;
