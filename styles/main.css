@@ -5,12 +5,12 @@
 }
 
 button.center{
-	width: 6rem;
+	width: 8rem;
 	height: 3rem;
 	margin-top: 1rem;
 }
 
 #title{
-	color:red;
+	color:blue;
 	text-align: center;
 }
