@@ -1,3 +1,7 @@
+body{
+	background-color: #F2ECDE;
+}
+
 #title, .center{
 	display: block;
 	margin-left: auto;
@@ -8,9 +12,22 @@ button.center{
 	width: 6rem;
 	height: 3rem;
 	margin-top: 1rem;
+	
+	color: #F2ECDE;
+	background-color: #5FCA00;
+	
+	border-radius: 2rem;
+}
+
+button:hover{
+	background-color: #036C17;
+}
+
+button:active{
+	box-shadow: -0.05rem 0.25rem 0rem #112250; 
 }
 
 #title{
-	color:red;
+	color: #E87305;
 	text-align: center;
 }
