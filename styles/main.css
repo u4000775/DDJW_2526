@@ -8,9 +8,29 @@ button.center{
 	width: 6rem;
 	height: 3rem;
 	margin-top: 1rem;
+    
 }
 
 #title{
-	color:red;
+	color:orange;
 	text-align: center;
+}
+
+#play{
+    background-color:blueviolet;
+    border:none;
+    border-radius:100px;
+}
+
+#options{
+    background-color:goldenrod;
+    border-color:red;
+    color:green;
+    font-size:larger;
+    
+}
+#saves{
+    border-color:blanchedalmond;
+    color:cyan;
+    background-color:pink;
 }
