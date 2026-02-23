@@ -8,9 +8,47 @@ button.center{
 	width: 6rem;
 	height: 3rem;
 	margin-top: 1rem;
+	transition: all 0.5s;
+	cursor: pointer;
 }
 
 #title{
 	color:red;
 	text-align: center;
+}
+
+#play {
+	background-color: green;
+}
+#play:hover {
+	background-color: aquamarine;
+}
+#play:active{
+	color: navy;
+}
+
+#options {
+	color: cornflowerblue;
+}
+#options:hover {
+	color: darkred;
+}
+#options:active {
+	background-color: indianred;
+}
+#saves{
+	color: darkred;
+}
+#saves:hover {
+	border-radius: 100%;
+}
+#exit {
+	background: cyan;
+	border: 3px dotted black;
+}
+#exit:hover {
+	border: 3px double black;
+}
+#exit:active{
+	border: 3px dashed red;
 }
