@@ -1,9 +1,10 @@
 addEventListener('load', function() {
     document.getElementById('play').addEventListener('click', 
     function(){
-        alert("Comença la partida");
+	   let alies = prompt ("Introdueix el teu àlies");
+		console.log(alies);
     });
-
+	
     document.getElementById('options').addEventListener('click', 
     function(){
         console.error("Opció no implementada");
