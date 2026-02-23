@@ -5,12 +5,37 @@
 }
 
 button.center{
-	width: 6rem;
-	height: 3rem;
+	width: 15rem;
+	height: 4rem;
 	margin-top: 1rem;
+	background-color: #E6F0DC;
+	color: #55883B;
+	font-weight: bold;
+	border-radius: 3.5rem;
+	border: none;
+	font-size: 1.5rem;
+	font-family: Copperplate, Papyrus, fantasy;
+	box-shadow: 0.125rem 0.5rem #9A6735;
+	
 }
 
 #title{
-	color:red;
+	color:#9A6735;
 	text-align: center;
+	font-family: Copperplate, Papyrus, fantasy;
+	font-size: 7.5rem;
+}
+body {
+	background-color:#C1E899;
+}
+
+button:hover{
+	box-shadow: 0.25rem 0.75rem #55883B;
+	font-size: 2rem;
+}
+
+button:active{
+	color: #E6F0DC;
+	background-color: #9A6735;
+	box-shadow: 0 0;
 }
