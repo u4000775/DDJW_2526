@@ -1,7 +1,9 @@
 addEventListener('load', function() {
     document.getElementById('play').addEventListener('click', 
     function(){
-        alert("Comença la partida");
+        let aliasJugador = prompt("Introdueix el teu àlies per jugar:");
+        console.log("Àlies del jugador: " + aliasJugador);
+        alert("Benvingut, " + aliasJugador + "! El joc començarà aviat.");
     });
 
     document.getElementById('options').addEventListener('click', 
