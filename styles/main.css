@@ -1,16 +1,37 @@
-#title, .center{
+/* background */
+body {
+	background-color: lightblue; 
+}
+
+#title, .center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-button.center{
-	width: 6rem;
-	height: 3rem;
-	margin-top: 1rem;
+/* title */
+#title {
+	color: darkblue; 
+	text-align: center;
+	font-size: 3rem; 
 }
 
-#title{
-	color:red;
-	text-align: center;
+/* Buttons */
+button.center {
+	width: 8rem;
+	height: 3rem;
+	margin-top: 1rem;
+	background-color: white;
+	border: 2px solid black;
+	cursor: pointer; 
+}
+
+/* Hover */
+button.center:hover {
+	background-color: turquoise;
+}
+
+/* Active */
+button.center:active {
+	background-color: palegreen;
 }
