@@ -1,16 +1,57 @@
-#title, .center{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+:root {
+  --clr-verd: #33ff55;
+  --clr-blau: #33aaff;
+  --clr-groc: #ffcc00;
+  --clr-vermell: #ff3333;
 }
 
-button.center{
-	width: 6rem;
-	height: 3rem;
-	margin-top: 1rem;
+body {
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#title{
-	color:red;
-	text-align: center;
+#title, .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+button.btn-verd { --btn-color: var(--clr-verd); }
+button.btn-blau { --btn-color: var(--clr-blau); }
+button.btn-groc { --btn-color: var(--clr-groc); }
+button.btn-vermell { --btn-color: var(--clr-vermell); }
+
+button.center {
+  width: 10rem;
+  height: 3.5rem;
+  margin-top: 1.5rem;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  border-bottom-color: var(--btn-color);
+  transition: border-left-color 0.15s ease-in-out 0s,
+              border-top-color 0.15s ease-in-out 0.15s,
+              border-right-color 0.15s ease-in-out 0.3s;
+}
+
+button.center:hover {
+  border-right-color: var(--btn-color);
+  border-top-color: var(--btn-color);
+  border-left-color: var(--btn-color);
+  transition: border-right-color 0.15s ease-in-out 0s,
+              border-top-color 0.15s ease-in-out 0.15s,
+              border-left-color 0.15s ease-in-out 0.3s;
 }
