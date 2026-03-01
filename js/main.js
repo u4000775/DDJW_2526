@@ -1,6 +1,8 @@
 addEventListener('load', function() {
     document.getElementById('play').addEventListener('click', 
     function(){
+        let nomJugador = prompt("Introdueix el teu nom per jugar:");
+        console.log("El nom del jugador es: " + nomJugador);
         alert("Comença la partida");
     });
 
