@@ -25,3 +25,15 @@ button{
 	color:beige;
 	border-radius: 15px;
 }
+
+button:hover{
+	background-color: paleturquoise;
+	color:black;
+	text-decoration: solid;
+	text-decoration-thickness: initial;
+}
+
+button:active{
+	background-color:dimgray;
+	color:cornsilk;
+}
