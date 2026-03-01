@@ -1,25 +1,32 @@
-addEventListener('load', function() {
-	var alies;
-    document.getElementById('play').addEventListener('click', 
-    function(){
-        alies = window.prompt(message, default);
-		console.warn(alies);
+window.addEventListener('load', function() {
+    var alies;
+
+    // Botó Jugar: demana l'àlies i el mostra per consola
+    document.getElementById('play').addEventListener('click', function(){
+        alies = window.prompt("Introdueix el teu àlies de guerrer:", "Jugador1");
+        
+        if (alies != null && alies != "") {
+            console.log("Àlies del jugador: " + alies);
+            alert("Benvingut, " + alies + "!");
+        } else {
+            console.warn("No s'ha introduït cap àlies.");
+        }
     });
 
-    document.getElementById('options').addEventListener('click', 
-    function(){
+    // Botó Opcions
+    document.getElementById('options').addEventListener('click', function(){
         console.error("Opció no implementada");
-		var BO = document.getElementById('options');
-		BO.body.Style.backgroundColor=rgba(0,200,0,0);
+        // Corregit: Canviem el fons del body com a exemple
+        document.body.style.backgroundColor = "rgba(0, 200, 0, 0.2)";
     });
 
-    document.getElementById('saves').addEventListener('click', 
-    function(){
+    // Botó Partides
+    document.getElementById('saves').addEventListener('click', function(){
         console.error("Opció no implementada");
     });
 
-    document.getElementById('exit').addEventListener('click', 
-    function(){
-        console.warn("No es pot sortir!");
+    // Botó Sortir
+    document.getElementById('exit').addEventListener('click', function(){
+        console.warn("No es pot sortir del navegador!");
     });
 });
