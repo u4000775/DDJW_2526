@@ -1,7 +1,11 @@
 addEventListener('load', function() {
     document.getElementById('play').addEventListener('click', 
     function(){
-        alert("Comença la partida");
+        //Demanem l'àlies i el guardem en variable
+		let alias = prompt("Introdueix el teu àlies:");
+		
+		//Ara ho mostrem per consola
+		console.log("L'àlies introduït és: " + alias);
     });
 
     document.getElementById('options').addEventListener('click', 
