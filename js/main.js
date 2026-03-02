@@ -3,6 +3,7 @@ addEventListener('load', function() {
     function(){
         let person = prompt("Si us plau digues el teu nom", "Jose García");
         console.log(person);
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
