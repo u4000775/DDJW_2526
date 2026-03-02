@@ -1,0 +1,11 @@
+#game{
+	    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 60%;
+    margin: auto;
+}
+.card{
+	margin:auto
+}

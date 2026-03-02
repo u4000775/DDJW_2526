@@ -9,7 +9,8 @@ items.forEach(function (value, idx)
 {
     game.append(`<img id="${idx}" title="card">`);  // Add element
     cards.push($(`#${idx}`));                       // Obtain element
-    setValue(idx, value);                           // Modify values
+    cards[idx].attr('class', 'card');
+	setValue(idx, value);                           // Modify values
 });
 
 export function setValue(idx, value){
