@@ -46,3 +46,30 @@ button.center:active {
     transform: translateY(5px); 
     box-shadow: 0px 0px 0px #8e44ad;
 }
+
+/* titol Partida */
+h1 {
+    color: #8e44ad;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 4px 4px 0px #e4c4f9;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+#game img {
+    /*fer les cartes més boniques*/
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
