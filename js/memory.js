@@ -47,12 +47,22 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
+
+            let primeraCarta = game.lastCard;
+            let segonaCarta =indx;
+            //1000 ms =1 segon
+            setTimeout(function() {
+                goBack(primeraCarta);
+                goBack(segonaCarta);
+            }, 1000);
+
             game.score -= 25;
             if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
+                //Retras de 1 segon també per poder veure la carta errada
+                setTimeout(function() {
+                    alert ("Has perdut");
+                    window.location.assign("../");
+                }, 1000);
             }
         }
         game.lastCard = null;
