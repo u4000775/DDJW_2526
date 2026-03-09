@@ -1,10 +1,11 @@
 addEventListener('load', function() {
-    document.getElementById('play').addEventListener('click', 
-    function(){
-        let name = prompt("Entra el nom d'usuari:");
+    document.getElementById('play').addEventListener('click',
+        function(){
+            let name = prompt("Entra el nom d'usuari:");
 
-        console.log("El teun nom és: " + name);
-        alert("Comença la partida");
+            console.log("El teun nom és: " + name);
+            alert("Comença la partida");
+            window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
