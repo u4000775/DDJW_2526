@@ -5,6 +5,7 @@ addEventListener('load', function() {
 		const alies = prompt("Introdueix el teu àlies de jugador:");
 		if (alies != null) {
 			console.log("L'àlies del jugador és: " + alies);
+			window.location.assign("./html/game.html");
 		}
     });
 
