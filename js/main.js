@@ -1,3 +1,5 @@
+import {$} from "../library/jquery-4.0.0.slim.module.min.js";
+
 addEventListener('load', function() {
     $('#play').on('click', 
     function(){

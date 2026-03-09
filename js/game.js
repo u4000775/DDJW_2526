@@ -27,3 +27,4 @@ export function clickOn(idx){
 }
 
 startGame();
+
