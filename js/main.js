@@ -6,6 +6,7 @@ addEventListener('load', function() {
 		
 		//Ara ho mostrem per consola
 		console.log("L'àlies introduït és: " + alias);
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
@@ -23,3 +24,4 @@ addEventListener('load', function() {
         console.warn("No es pot sortir!");
     });
 });
+
