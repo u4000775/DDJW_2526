@@ -37,8 +37,11 @@ export function startGame(){
 export function clickCard(indx){
     if (game.ready < items.length) return;
     goFront(indx);
-    if (game.lastCard === null) game.lastCard = indx; // Primera carta clicada
-    else{ // Teníem carta prèvia
+    
+    if (game.lastCard === null) {
+        game.lastCard = indx; 
+    } 
+    else { 
         if (items[game.lastCard] === items[indx]){
             game.pairs--;
             if (game.pairs <= 0){
@@ -47,8 +50,13 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
+            game.ready = 0; 
+            setTimeout(function(){
+                goBack(indx);
+                goBack(game.lastCard);
+                game.ready = items.length; 
+            }, 1000); 
+
             game.score -= 25;
             if (game.score <= 0){
                 alert ("Has perdut");
