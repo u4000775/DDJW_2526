@@ -1,23 +1,27 @@
-	addEventListener('load', function() {
-    document.getElementById('play').addEventListener('click', 
+	import {$} from "../library/jquery-4.0.0.slim.module.min.js";
+	var p = $('#play');
+	var o = $('#options');
+	var s = $('#saves');
+	var e = $('#exit');
+    p.on('click', 
     function(){
         let alias = prompt("Quin és el teu àlies?");
 		console.log(alias);
         window.location.assign("./html/game.html");
     });
 
-    document.getElementById('options').addEventListener('click', 
+    o.on('click', 
     function(){
         console.error("Opció no implementada");
     });
 
-    document.getElementById('saves').addEventListener('click', 
+    s.on('click', 
     function(){
         console.error("Opció no implementada");
     });
 
-    document.getElementById('exit').addEventListener('click', 
+    e.on('click', 
     function(){
         console.warn("No es pot sortir!");
     });
-});
+	
