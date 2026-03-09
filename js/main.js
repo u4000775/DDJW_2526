@@ -3,6 +3,7 @@
     function(){
         let alias = prompt("Quin és el teu àlies?");
 		console.log(alias);
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
