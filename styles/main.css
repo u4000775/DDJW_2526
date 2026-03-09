@@ -35,3 +35,15 @@ button.center:active {
 }
 
 
+#game {
+    display: flex !important;    
+    justify-content: center;      
+    flex-wrap: wrap;             
+    margin: 20px auto;       
+    max-width: 95%;             
+}
+
+#game img {
+    width: 100px;                
+    height: 140px;
+}
