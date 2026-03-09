@@ -47,8 +47,14 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
+			const currentCard = indx;
+            const previousCard = game.lastCard;
+            game.ready -= 2;
+            setTimeout(function() {
+                goBack(currentCard);
+                goBack(previousCard);
+                game.ready += 2;
+            }, 1000);
             game.score -= 25;
             if (game.score <= 0){
                 alert ("Has perdut");
