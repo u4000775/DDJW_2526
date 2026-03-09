@@ -46,13 +46,19 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
             game.score -= 25;
-            if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
-            }
+            game.waiting = true;
+            let prevCard = game.lastCard; // Guardem l'ultima carta jugada
+            game.lastCard = null; // Reiniciem la jugada
+            setTimeout(()=> {
+                goBack(indx);
+                goBack(prevCard);
+                game.waiting = false;
+                if (game.score <= 0) {
+                    alert("Has perdut");
+                    window.location.assign("../");
+                }
+            }, 1000)
         }
         game.lastCard = null;
     }
