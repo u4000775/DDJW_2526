@@ -7,8 +7,12 @@ var game = $('#game');
 selectCards();
 items.forEach(function (value, idx)
 {
-    game.append(`<img id="${idx}" title="card">`);  // Add element
-    cards.push($(`#${idx}`));                       // Obtain element
+    let $img = $('<img>', {
+        id: idx,
+        title: 'card'
+    });
+    game.append($img);  // Add element
+    cards.push($img);                       // Obtain element
     setValue(idx, value);                           // Modify values
 });
 
