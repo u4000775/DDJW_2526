@@ -4,6 +4,7 @@ addEventListener('load', function() {
         var alias = prompt("Quin nom tens?");
 		console.log(alias);
 		alert("Benvingut " + alias + "!");
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
