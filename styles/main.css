@@ -34,3 +34,18 @@ button.center{
     color:cyan;
     background-color:pink;
 }
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+#game img {
+    display: block;
+}
+
