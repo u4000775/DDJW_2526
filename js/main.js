@@ -1,5 +1,5 @@
 addEventListener('load', function() {
-    document.getElementById('play').addEventListener('click', 
+    $('#play').on('click', 
     function(){
         //Demanem l'àlies i el guardem en variable
 		let alias = prompt("Introdueix el teu àlies:");
@@ -9,17 +9,17 @@ addEventListener('load', function() {
         window.location.assign("./html/game.html");
     });
 
-    document.getElementById('options').addEventListener('click', 
+    $('#options').on('click', 
     function(){
         console.error("Opció no implementada");
     });
 
-    document.getElementById('saves').addEventListener('click', 
+    $('#saves').on('click', 
     function(){
         console.error("Opció no implementada");
     });
 
-    document.getElementById('exit').addEventListener('click', 
+    $('#exit').on('click', 
     function(){
         console.warn("No es pot sortir!");
     });
