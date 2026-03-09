@@ -5,6 +5,11 @@ var cards = [];
 var game = $('#game');
 
 selectCards();
+
+let totalCards = items.length;
+// Calculem les columnes arrodonint l'arrel quadrada cap amunt
+let columns = Math.ceil(Math.sqrt(totalCards));
+game.css('grid-template-columns', `repeat(${columns}, 100px)`);
 items.forEach(function (value, idx)
 {
     let $img = $('<img>', {

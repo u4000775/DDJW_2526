@@ -17,6 +17,10 @@ button.center{
 	text-align: center;
 }
 
+#gameTitle{
+	text-align: center;
+}
+
 #play {
 	background-color: green;
 }
@@ -51,4 +55,20 @@ button.center{
 }
 #exit:active{
 	border: 3px dashed red;
+}
+#gameBody{
+	background-color: white;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+#game {
+	background-color: white;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+	display: grid;
+	gap: 15px;
+	justify-content: center;
 }
