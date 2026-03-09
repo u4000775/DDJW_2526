@@ -4,6 +4,7 @@ addEventListener('load', function() {
         let aliasJugador = prompt("Introdueix el teu àlies per jugar:");
         console.log("Àlies del jugador: " + aliasJugador);
         alert("Benvingut, " + aliasJugador + "! El joc començarà aviat.");
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
