@@ -3,6 +3,7 @@ addEventListener('load', function() {
     function(){
         let alies = prompt("Identificat amb un alies")
 		console.log(alies);
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
