@@ -11,6 +11,7 @@ var game = {
     lastCard: null,
     score: 200,
     pairs: 2
+	isProcessing: false
 }
 
 function shuffe(arr){
@@ -35,7 +36,7 @@ export function startGame(){
 }
 
 export function clickCard(indx){
-    if (game.ready < items.length) return;
+    if (game.ready < items.length || game.isProcessing || game.lastCard === indx) return;
     goFront(indx);
     if (game.lastCard === null) game.lastCard = indx; // Primera carta clicada
     else{ // Teníem carta prèvia
@@ -47,13 +48,20 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
-            game.score -= 25;
-            if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
-            }
+			game.isProcessing = true;
+			
+            setTimeout(function() {
+                goBack(indx);
+                goBack(game.lastCard);
+                
+                game.score -= 25;
+                game.lastCard = null;
+
+                if (game.score <= 0) {
+                    alert("Game Over");
+                    window.location.assign("../");
+                }
+            }, 1000);
         }
         game.lastCard = null;
     }
