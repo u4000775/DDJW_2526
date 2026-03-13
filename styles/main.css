@@ -39,3 +39,13 @@ button.center:active {
     text-align: center;
     text-transform: uppercase;
 }
+
+/*Afegeixo estil pel game*/
+#game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 800px
+	gap: 10px;
+}
