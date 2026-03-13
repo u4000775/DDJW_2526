@@ -7,7 +7,7 @@ const back = '../resources/back.png';
 export var items = [];
 
 var game = {
-    ready: 0,
+    ready: 0,	
     lastCard: null,
     score: 200,
     pairs: 2
@@ -34,8 +34,9 @@ export function startGame(){
     });
 }
 
+
 export function clickCard(indx){
-    if (game.ready < items.length) return;
+    if (game.ready < items.lengt) return;
     goFront(indx);
     if (game.lastCard === null) game.lastCard = indx; // Primera carta clicada
     else{ // Teníem carta prèvia
@@ -47,13 +48,20 @@ export function clickCard(indx){
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
+			let cartaActual = indx;
+            let cartaPrevia = game.lastCard;
+			setTimeout(function() {
+                goBack(cartaActual);
+                goBack(cartaPrevia);
+            }, 1000);
+			
             game.score -= 25;
-            if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
-            }
+			if (game.score <= 0){
+				setTimeout(function() {
+                    alert ("Has perdut");
+                    window.location.assign("../");
+                }, 1000);
+			}
         }
         game.lastCard = null;
     }
