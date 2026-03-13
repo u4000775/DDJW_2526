@@ -1,22 +1,22 @@
-addEventListener('load', function() {
-    document.getElementById('play').addEventListener('click', 
-    function(){
-       const alias = prompt("Introdueix l'àlies: ");
-        console.log(alias);
+import { $ } from '../library/jquery-4.0.0.slim.module.min.js';
+
+$(window).on('load', function() {
+    $('#play').on('click', function(){
+        let alies = prompt("Identificat amb un alies");
+        console.log(alies);
+        $(location).attr('href', "./html/game.html");
     });
 
-    document.getElementById('options').addEventListener('click', 
-    function(){
-        console.error("Opció no implementada");
+    $('#options').on('click', function(){
+        alert("Opcions:");
     });
 
-    document.getElementById('saves').addEventListener('click', 
-    function(){
-        console.error("Opció no implementada");
+    $('#saves').on('click', function(){
+        alert("Partides anteriors:");
     });
 
-    document.getElementById('exit').addEventListener('click', 
-    function(){
-        console.warn("No es pot sortir!");
+    $('#exit').on('click', function(){
+        alert("Sortint....");
+        console.warn("Carregant sortida");
     });
 });

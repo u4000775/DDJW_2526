@@ -1,0 +1,16 @@
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; 
+    margin: 0 auto;
+    gap: 10px;
+}
+
+#game img {
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+}
