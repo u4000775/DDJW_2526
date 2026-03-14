@@ -10,6 +10,7 @@ addEventListener('load', function() {
         } else {
             alert("Comença la partida, jugador anònim!");
         }
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', 
