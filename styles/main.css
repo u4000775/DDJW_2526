@@ -40,3 +40,20 @@ button.center:active {
 	transform: scale(0.95); 
 	background-color: #2980b9;
 }
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+#game img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
