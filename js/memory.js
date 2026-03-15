@@ -1,4 +1,3 @@
-import { jQuery } from '../library/jquery-4.0.0.slim.module.min.js';
 import {setValue, clickOn, clickOff} from './game.js';
 const resources = ['../resources/cb.png', '../resources/co.png',
                 '../resources/sb.png', '../resources/so.png',
@@ -41,21 +40,31 @@ export function clickCard(indx){
     else{ // Teníem carta prèvia
         if (items[game.lastCard] === items[indx]){
             game.pairs--;
+            game.lastCard = null;
+            
             if (game.pairs <= 0){
                 alert(`Has guanyat amb ${game.score} punts!!!!`);
                 window.location.assign("../");
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
             game.score -= 25;
-            if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
-            }
+
+            var cartaPrevia = game.lastCard;
+            game.lastCard = null;
+            game.ready = 0;
+
+            setTimeout(function() {
+                goBack(indx);
+                goBack(cartaPrevia);
+                game.ready = items.length;
+
+                if (game.score <= 0){
+                    alert ("Has perdut");
+                    window.location.assign("../");
+                }
+            }, 1000);
         }
-        game.lastCard = null;
     }
 }
 
