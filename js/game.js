@@ -4,12 +4,14 @@ import {clickCard, items, selectCards, startGame} from "./memory.js";
 var cards = [];
 var game = $('#game');
 
-selectCards();
-items.forEach(function (value, idx)
-{
-    game.append(`<img id="${idx}" title="card">`);  // Add element
-    cards.push($(`#${idx}`));                       // Obtain element
-    setValue(idx, value);                           // Modify values
+$(function() {
+    selectCards();
+    items.forEach(function (value, idx) {
+        game.append(`<img id="${idx}" title="card" src="">`);
+        cards.push($(`#${idx}`)); 
+        setValue(idx, value);
+    });
+    startGame();
 });
 
 export function setValue(idx, value){
@@ -25,5 +27,3 @@ export function clickOn(idx){
         clickCard(idx);
     });
 }
-
-startGame();
