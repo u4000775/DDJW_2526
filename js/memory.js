@@ -9,7 +9,7 @@ var game = {
     ready: 0,
     lastCard: null,
     score: 200,
-    pairs: 5
+    pairs: 6
 }
 
 function shuffe(arr){
