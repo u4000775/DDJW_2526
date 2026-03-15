@@ -47,7 +47,7 @@ export async function clickCard(indx){
             }
         }
         else {
-			await delay (3000);
+			await delay (1000);
 			goBack(indx);
 			goBack(game.lastCard);
 			game.score -= 25;

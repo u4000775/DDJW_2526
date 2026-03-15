@@ -25,5 +25,10 @@ export function clickOn(idx){
         clickCard(idx);
     });
 }
+$(function() {
+	$('#sortir').on('click', function(){
+			window.location.assign("../index.html");
+		});
+});
 
 startGame();
