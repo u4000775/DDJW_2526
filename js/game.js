@@ -1,3 +1,6 @@
+import {$} from "../library/jquery-4.0.0.slim.module.min.js";
+import {clickCard, items, selectCards, startGame} from "./memory.js";
+
 var cards = [];
 var game = $('#game');
 
