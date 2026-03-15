@@ -1,7 +1,8 @@
-window.addEventListener('load', function() {
-    document.getElementById('play').addEventListener('click', function() {
+addEventListener('load', function() {
+    document.getElementById('play').addEventListener('click', function(){
         let alies = prompt("Introdueix el teu àlies:");
         console.log(alies);
+        window.location.assign("./html/game.html");
     });
 
     document.getElementById('options').addEventListener('click', function() {
