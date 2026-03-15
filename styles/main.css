@@ -35,3 +35,15 @@ button.center:hover {
 button.center:active {
 	background-color: palegreen;
 }
+
+#game {
+    display: flex;           /* Activa flexbox para colocar los elementos */
+    flex-wrap: wrap;         /* Permite que las cartas salten a la siguiente línea si no caben */
+    justify-content: center; /* Centra las cartas horizontalmente */
+    gap: 15px;               /* Añade un espacio de separación entre las cartas */
+    max-width: 800px;        /* Limita el ancho máximo para que no se estiren por toda la pantalla */
+    margin: 30px auto;       /* Centra el propio contenedor #game en la página */
+}
+#game img {
+    cursor: pointer;
+}

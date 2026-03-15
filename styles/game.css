@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: darkblue; 
+    text-align: center;
+    font-size: 3rem; 
+}
+
+/* Centrat les cartes */
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#game img {
+    cursor: pointer;
+}
