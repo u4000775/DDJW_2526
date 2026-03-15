@@ -37,28 +37,33 @@ export function startGame(){
 export function clickCard(indx){
     if (game.ready < items.length) return;
     goFront(indx);
-    if (game.lastCard === null) game.lastCard = indx; // Primera carta clicada
-    else{ // Teníem carta prèvia
+    if (game.lastCard === null) {
+        game.lastCard = indx;
+    } else {
         if (items[game.lastCard] === items[indx]){
             game.pairs--;
             if (game.pairs <= 0){
                 alert(`Has guanyat amb ${game.score} punts!!!!`);
                 window.location.assign("../");
             }
-        }
-        else {
-            goBack(indx);
-            goBack(game.lastCard);
+        } else {
+            let cartaActual = indx;
+            let cartaPrevia = game.lastCard;
+            setTimeout(function() {
+                goBack(cartaActual);
+                goBack(cartaPrevia);
+            }, 1000);
             game.score -= 25;
             if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
+                setTimeout(function() {
+                    alert ("Has perdut");
+                    window.location.assign("../");
+                }, 1000);
             }
         }
         game.lastCard = null;
     }
 }
-
 function goBack(idx){
     setValue(idx, back);
     clickOn(idx);
