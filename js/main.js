@@ -14,3 +14,4 @@ $(document).ready(function() {
         console.warn("No es pot sortir!");
     });
 });
+

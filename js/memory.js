@@ -59,7 +59,7 @@ export function clickCard(indx){
         }
         game.lastCard = null;
     }
-
+}
 
 function goBack(idx){
     setValue(idx, back);
