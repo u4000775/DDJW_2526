@@ -2,6 +2,12 @@ body{
 	background-color: #F2ECDE;
 }
 
+#game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 #title, .center{
 	display: block;
 	margin-left: auto;
