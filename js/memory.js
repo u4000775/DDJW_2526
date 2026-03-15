@@ -1,5 +1,6 @@
 import { jQuery } from '../library/jquery-4.0.0.slim.module.min.js';
 import {setValue, clickOn, clickOff} from './game.js';
+
 const resources = ['../resources/cb.png', '../resources/co.png',
                 '../resources/sb.png', '../resources/so.png',
                 '../resources/tb.png', '../resources/to.png'];
@@ -7,7 +8,7 @@ const back = '../resources/back.png';
 export var items = [];
 
 var game = {
-    ready: 0,
+    ready: false,
     lastCard: null,
     score: 200,
     pairs: 2
@@ -18,44 +19,63 @@ function shuffe(arr){
 }
 
 export function selectCards(){
-    items = resources.slice();          // TODO: Copiem l'array resources
-    shuffe(items);                      // Barregem les cartes
-    items = items.slice(0, game.pairs); // TODO: Agafem N elements (Parelles de cartes)
-    items = items.concat(items);        // TODO: Dupliquem l'array
-    shuffe(items);                      // Barregem les cartes
+    items = resources.slice();          
+    shuffe(items);                      
+    items = items.slice(0, game.pairs); 
+    items = items.concat(items);        
+    shuffe(items);                      
 }
 
 export function startGame(){
+    let count = 0;
     items.forEach(function(_,indx){
         setTimeout(function(){
-            game.ready++;
             goBack(indx);
+            count++;
+            if (count === items.length) game.ready = true;
         }, 1000 + 100 * indx);
     });
 }
 
 export function clickCard(indx){
-    if (game.ready < items.length) return;
+    if (!game.ready) return;
+
     goFront(indx);
-    if (game.lastCard === null) game.lastCard = indx; // Primera carta clicada
-    else{ // Teníem carta prèvia
-        if (items[game.lastCard] === items[indx]){
+
+    if (game.lastCard === null) {
+        game.lastCard = indx;
+    } 
+    else {
+        let currentCard = indx;
+        let previousCard = game.lastCard;
+        game.lastCard = null;
+
+        if (items[previousCard] === items[currentCard]){
             game.pairs--;
             if (game.pairs <= 0){
-                alert(`Has guanyat amb ${game.score} punts!!!!`);
-                window.location.assign("../");
+                setTimeout(() => {
+                    alert(`Has guanyat amb ${game.score} punts!!!!`);
+                    window.location.assign("../");
+                }, 500);
             }
         }
         else {
-            goBack(indx);
-            goBack(game.lastCard);
+            game.ready = false; 
+
+            setTimeout(function(){
+                goBack(currentCard);
+                goBack(previousCard);
+                game.ready = true; 
+            }, 1000); 
+
             game.score -= 25;
             if (game.score <= 0){
-                alert ("Has perdut");
-                window.location.assign("../");
+                setTimeout(() => {
+                    alert ("Has perdut");
+                    window.location.assign("../");
+                }, 500);
             }
         }
-        game.lastCard = null;
     }
 }
 
