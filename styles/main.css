@@ -27,6 +27,7 @@ button.center{
 }
 body {
 	background-color:#C1E899;
+	text-align: center;
 }
 
 button:hover{
@@ -38,4 +39,23 @@ button:active{
 	color: #E6F0DC;
 	background-color: #9A6735;
 	box-shadow: 0 0;
+}
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    max-width: 800px;        
+    margin: 40px auto;       
+    padding: 20px;
+    background-color: rgba(0,0,0,0.05); 
+}
+
+#game img {
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
