@@ -47,6 +47,7 @@ export function clickCard(indx){
             }
         }
         else {
+			setTimeout(function() {
             goBack(indx);
             goBack(game.lastCard);
             game.score -= 25;
@@ -54,6 +55,7 @@ export function clickCard(indx){
                 alert ("Has perdut");
                 window.location.assign("../");
             }
+			}, 1000);
         }
         game.lastCard = null;
     }
