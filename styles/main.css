@@ -31,3 +31,12 @@ button.center:active{
 	color:red;
 	text-align: center;
 }
+
+#game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	max-width: 800px;
+	margin: 20px auto;
+}
