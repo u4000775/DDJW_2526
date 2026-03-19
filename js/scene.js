@@ -9,10 +9,13 @@ export class PlayScene extends Phaser.Scene{
     }
 
     preload() {
-        this.cards.forEach(card => {
+        this.cards.forEach((card, indx) => {
             if (!this.resources.includes(card))
                 this.resources.push(card);
-            initCard(val => card = val); 
+            initCard(val => {
+                this.cards[indx] = val
+                console.log(val);
+            }); 
         });
         this.resources.push("../resources/back.png");
         this.resources.forEach(r=>this.load.image(r,r)); // Primer paràmetre nom Segon paràmetre direcció
@@ -31,5 +34,7 @@ export class PlayScene extends Phaser.Scene{
         });
     }
 
-    update() { }
+    update() { 
+        this.g_cards.children.iterate((c, i) => c.setTexture(this.cards[i]));
+    }
 }
